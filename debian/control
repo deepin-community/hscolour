@@ -1,0 +1,64 @@
+Source: hscolour
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Erik de Castro Lopo <erikd@mega-nerd.com>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts-minimal,
+Build-Depends-Indep: ghc-doc
+Standards-Version: 4.5.0
+Homepage: http://code.haskell.org/~malcolm/hscolour/
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/hscolour
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/hscolour]
+
+Package: hscolour
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Description: Haskell program to colourise Haskell code
+ HsColour currently has five output formats: ANSI terminal codes, HTML 3.2
+ with <font> tags, HTML 4.01 with CSS, LaTeX, and mIRC chat client
+ codes.
+
+Package: libghc-hscolour-dev
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: drift (>= 2.2.0), ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: GHC libraries for colourising Haskell code${haskell:ShortBlurb}
+ HsColour currently has five output formats: ANSI terminal codes, HTML 3.2
+ with <font> tags, HTML 4.01 with CSS, LaTeX, and mIRC chat client
+ codes.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-hscolour-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Profiling libraries for colourising Haskell code${haskell:ShortBlurb}
+ HsColour currently has five output formats: ANSI terminal codes, HTML 3.2
+ with <font> tags, HTML 4.01 with CSS, LaTeX, and mIRC chat client
+ codes.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-hscolour-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: Documentation for libghc-hscolour-dev${haskell:ShortBlurb}
+ HsColour currently has five output formats: ANSI terminal codes, HTML 3.2
+ with <font> tags, HTML 4.01 with CSS, LaTeX, and mIRC chat client
+ codes.
+ .
+ ${haskell:Blurb}
